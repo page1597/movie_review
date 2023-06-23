@@ -22,11 +22,14 @@ class _ListPageState extends State<ListPage> {
               'review reviewreviewreviewreviewreviewreviewreviewreviewreviewreviewreviewreviewreviewreviewreviewreview',
           star: 5),
     ];
-    return ListView(
-      children: [
-        const SearchBarComponent(placeholder: '영화 제목을 입력하세요.'),
-        reviewSearchComponent(movie: movie, me: false)
-      ],
+    return Padding(
+      padding: const EdgeInsets.all(16.0),
+      child: ListView(
+        children: [
+          const SearchBarComponent(placeholder: '영화 제목을 입력하세요.'),
+          reviewSearchComponent(movie: movie, me: false)
+        ],
+      ),
     );
   }
 }
